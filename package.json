@@ -1,0 +1,25 @@
+{
+    "name": "@hoax7/node-utils",
+    "version": "0.0.2",
+    "description": "",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "scripts": {
+        "test": "ts-node test.ts",
+        "dev": "ts-node index.ts",
+        "build": "tsc -p .",
+        "start": "node .",
+        "prepublish": "npm run build && npm version patch"
+    },
+    "files": [
+        "lib/**/*"
+    ],
+    "keywords": [],
+    "author": "HoaX7",
+    "license": "ISC",
+    "devDependencies": {
+        "ts-node": "^10.4.0",
+        "typescript": "^4.5.2"
+    },
+    "dependencies": {}
+}
