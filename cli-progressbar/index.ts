@@ -2,11 +2,11 @@
  * CLI Progress bar to visually show completed progress
  */
 class CLIProgress {
-    str_left
-    str_right
-    total = 0
-    current = 0
-    strtotal = 60
+    private str_left
+    private str_right
+    private total = 0
+    private current = 0
+    private strtotal = 60
     /**
      * 
      * @param {number} total - total number of items
@@ -36,8 +36,7 @@ class CLIProgress {
         if (this.current === this.total) {
             empty = this.str_left.repeat(this.strtotal)
         }
-        process.stdout.write(`\r[${dots}${empty}] ${this.current/this.total * 100}%`);
-        process.stdout.write("\n")
+        process.stdout.write(`\r[${dots}${empty}] ${this.current/this.total * 100}% ${this.current} / ${this.total}\t`);
     }
 }
 
